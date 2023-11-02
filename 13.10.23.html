@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const user = {
+            setItem: function (key, value) {
+                user[key] = value;
+            },
+            getItem: function(key) {
+                return user[key];
+            },
+            removeItem: function(key) {
+                delete user[key];
+            }
+        }
+
+        user.setItem('name', 'Naveen');
+
+        console.log(user.getItem('name'));
+        
+        user.removeItem('name');
+
+        console.log(user.name);
+
+
+        localStorage.setItem('name','Karthik');
+
+        localStorage.setItem('user', JSON.stringify({userId: 1,token: 'fghghguhkuhuhghhbhbjb'}));
+
+        console.log(localStorage.getItem('name'));
+
+        // localStorage.removeItem('name');
+
+        // localStorage.clear();
+
+        sessionStorage.setItem('userInfo',JSON.stringify({name: 'Jayeesh', city: 'Hyderabad', Location:'Madhapur'}));
+
+        console.log(sessionStorage.getItem('userInfo'));
+
+    </script>
+</body>
+</html>
